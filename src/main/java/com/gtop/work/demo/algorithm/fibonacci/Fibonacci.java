@@ -1,7 +1,5 @@
 package com.gtop.work.demo.algorithm.fibonacci;
 
-import org.junit.Test;
-
 /**
  * @author hongzw@citycloud.com.cn
  * @Date 2022/7/30 8:14
@@ -52,12 +50,6 @@ public class Fibonacci {
             }
         }
         return res;
-    }
-
-    @Test
-    public void test() {
-        int n = getN(6);
-        System.out.println(n);
     }
 
 }
