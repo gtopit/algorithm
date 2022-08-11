@@ -65,9 +65,11 @@ public class HeapSort {
     }
 
     private static void swap(int[] arr, int index, int bestIndex) {
+
         int temp = arr[index];
         arr[index] = arr[bestIndex];
         arr[bestIndex] = temp;
+
     }
 
 }

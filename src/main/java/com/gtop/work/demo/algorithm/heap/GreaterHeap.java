@@ -59,6 +59,7 @@ public class GreaterHeap<E> {
     }
 
     public E poll() {
+
         if (heapSize > 0) {
             E e = heap.get(0);
             heap.set(0, heap.get(--heapSize));
