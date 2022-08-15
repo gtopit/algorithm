@@ -9,7 +9,7 @@ package com.gtop.work.demo.algorithm.manacher;
 public class Manacher {
 
     public static void main(String[] args) {
-        String str = "abaab";
+        String str = "abaabccd";
         Manacher manacher = new Manacher();
         System.out.println(manacher.getMax(str));
         System.out.println(manacher.getMaxPalindrome(str));
