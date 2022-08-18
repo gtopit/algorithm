@@ -1,5 +1,8 @@
 package com.gtop.work.demo.algorithm.window;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalUnit;
 import java.util.LinkedList;
 
 /**
@@ -18,6 +21,9 @@ public class NumberOfSubValue {
         int[] arr = new int[]{5, 2, 1, 3, 4, 4, 6, 7};
         System.out.println(right(arr, 3));
         System.out.println(way(arr, 3));
+
+        LocalDate parse = LocalDate.parse("2022-07-22").plus(90, ChronoUnit.DAYS);
+        System.out.println(parse);
 
     }
 

@@ -1,7 +1,5 @@
 package com.gtop.work.demo.algorithm.graph;
 
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +12,6 @@ import java.util.Objects;
  */
 public class Dijkstra {
 
-    @Test
     public void test() {
         Node head = new Node("A");
         Node b = new Node("B");
