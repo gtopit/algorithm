@@ -16,6 +16,7 @@ public class SplitGold {
 
     public static void main(String[] args) {
         int[] size = new int[]{1, 4, 5, 10, 19};
+
         System.out.println(getMin(size));
         System.out.println(getMin2(size));
     }
