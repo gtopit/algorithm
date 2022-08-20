@@ -12,6 +12,7 @@ public class Knapsack {
         int[] w = new int[]{5, 4, 1, 0};
         int[] v = new int[]{9, 8, 2, 2};
         int way1 = way1(w, v, 6);
+
         System.out.println(way1);
         int way2 = way2(w, v, 6);
         System.out.println(way2);
@@ -79,7 +80,6 @@ public class Knapsack {
         }
 
         int[][] dp = new int[w.length + 1][bag + 1];
-
         for (int index = w.length - 1; index >= 0; index--) {
             for (int rest = 0; rest <= bag; rest++) {
                 int p1;
