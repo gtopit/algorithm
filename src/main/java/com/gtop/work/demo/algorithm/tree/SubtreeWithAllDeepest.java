@@ -6,18 +6,59 @@ package com.gtop.work.demo.algorithm.tree;
 public class SubtreeWithAllDeepest {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(3);
-        root.left = new TreeNode(5);
-        root.right = new TreeNode(1);
-        root.left.left = new TreeNode(6);
-        root.left.right = new TreeNode(2);
-        root.left.right.left = new TreeNode(7);
-        root.left.right.right = new TreeNode(4);
-        root.right.left = new TreeNode(0);
-        root.right.right = new TreeNode(8);
-        TreeNode treeNode = subtreeWithAllDeepest(root);
-        System.out.println(treeNode.val);
-        System.out.println(maxDeep(root));
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        System.out.println(btreeGameWinningMove(root, 3, 2));
+    }
+
+
+    public static boolean btreeGameWinningMove(TreeNode root, int n, int x) {
+        TreeNode xNode = getNodeByValue(root, x);
+        int lNum = getNumberOfNode(xNode.left);
+        int rNum = getNumberOfNode(xNode.right);
+        int oNum = n - lNum - rNum - 1;
+        if (oNum > lNum + rNum + 1) {
+            return true;
+        }
+        if (lNum > oNum + rNum + 1) {
+            return true;
+        }
+        if (rNum > oNum + lNum + 1) {
+            return true;
+        }
+        return false;
+    }
+
+    private static int getNumberOfNode(TreeNode node) {
+
+        if (node == null) {
+            return 0;
+        }
+        int ln = getNumberOfNode(node.left);
+        int rn = getNumberOfNode(node.right);
+
+        return ln + rn + 1;
+    }
+
+    private static TreeNode getNodeByValue(TreeNode root, int x) {
+
+        if (root == null) {
+            return null;
+        }
+
+        if (root.val == x) {
+            return root;
+        }
+        TreeNode node = getNodeByValue(root.left, x);
+        if (node != null) {
+            return node;
+        }
+        node = getNodeByValue(root.right, x);
+        if (node != null) {
+            return node;
+        }
+        return null;
     }
 
     public static int maxDeep(TreeNode root) {
