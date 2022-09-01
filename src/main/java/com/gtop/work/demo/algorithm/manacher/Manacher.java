@@ -7,14 +7,7 @@ package com.gtop.work.demo.algorithm.manacher;
  * @Date 2021/12/16 9:23
  */
 public class Manacher {
-
-    public static void main(String[] args) {
-        String str = "abaabccd";
-        Manacher manacher = new Manacher();
-        System.out.println(manacher.getMax(str));
-        System.out.println(manacher.getMaxPalindrome(str));
-    }
-
+    
     /**
      * 获取最大的回文串大小
      *
